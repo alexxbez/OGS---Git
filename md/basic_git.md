@@ -145,6 +145,6 @@ Aunque no sea obvio, Git ya esta trackeando todos estos archivos y esta creando 
 
 ---
 
-# ¡Gracias!1
+# ¡Gracias!
 
 ## Siguiente parte: GitHub Básico
