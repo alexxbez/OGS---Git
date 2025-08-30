@@ -6,4 +6,6 @@ Esta es una guía para el uso de Git y Github. Dentro de este repo puedes encont
 
 **Introducción**: [Git y GitHub](https://alexxbez.github.io/OGS---Git/html/intro.html)
 
-**Instalación**: [Git y GitHub](https://alexxbez.github.io/OGS---Git/html/instal.html)
+**Instalación**: [Instalación](https://alexxbez.github.io/OGS---Git/html/instal.html)
+
+**Git**: [Git Básico](https://alexxbez.github.io/OGS---Git/html/basic_git.html)
