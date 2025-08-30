@@ -1,0 +1,534 @@
+/* Claude Ai */
+/* @theme catppuccin-mocha */
+
+@import 'default';
+
+:root {
+  /* Catppuccin Mocha Color Palette */
+  --rosewater: #f5e0dc;
+  --flamingo: #f2cdcd;
+  --pink: #f5c2e7;
+  --mauve: #cba6f7;
+  --red: #f38ba8;
+  --maroon: #eba0ac;
+  --peach: #fab387;
+  --yellow: #f9e2af;
+  --green: #a6e3a1;
+  --teal: #94e2d5;
+  --sky: #89dceb;
+  --sapphire: #74c7ec;
+  --blue: #89b4fa;
+  --lavender: #b4befe;
+  --text: #cdd6f4;
+  --subtext1: #bac2de;
+  --subtext0: #a6adc8;
+  --overlay2: #9399b2;
+  --overlay1: #7f849c;
+  --overlay0: #6c7086;
+  --surface2: #585b70;
+  --surface1: #45475a;
+  --surface0: #313244;
+  --base: #1e1e2e;
+  --mantle: #181825;
+  --crust: #11111b;
+}
+
+section {
+  background: linear-gradient(135deg, var(--base) 0%, var(--mantle) 100%);
+  position: relative;
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  line-height: 1.6;
+  padding: 60px 140px;
+  overflow: hidden;
+}
+
+/* Subtle animated background pattern */
+section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(203, 166, 247, 0.05) 0%, transparent 25%),
+    radial-gradient(circle at 75% 75%, rgba(137, 180, 250, 0.03) 0%, transparent 25%),
+    radial-gradient(circle at 50% 10%, rgba(166, 227, 161, 0.02) 0%, transparent 30%);
+  animation: subtleFloat 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes subtleFloat {
+  0%, 100% {
+    transform: translateY(0) translateX(0) scale(1);
+  }
+  33% {
+    transform: translateY(-10px) translateX(5px) scale(1.02);
+  }
+  66% {
+    transform: translateY(5px) translateX(-5px) scale(0.98);
+  }
+}
+
+/* --- PROGRESS BAR FIX --- */
+/* TARGET THE PAGINATION COUNTER AND HIDE IT */
+section[data-marpit-pagination]::after {
+  display: none !important;
+}
+
+/* Create progress bar container at the bottom of the section */
+section::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 2px !important; /* Makes it really, really thin */
+  background: var(--surface0) !important; /* Background track */
+  z-index: 10 !important;
+}
+
+/* The moving progress bar itself with gradient */
+section::before {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  height: 2px !important;
+  width: calc(var(--paginate-current) / var(--paginate-total) * 100%) !important;
+  background: linear-gradient(90deg, var(--mauve), var(--blue), var(--sky), var(--teal)) !important;
+  transition: width 0.3s ease !important;
+  z-index: 11 !important;
+}
+/* --- END PROGRESS BAR FIX --- */
+
+/* Hide default page numbers */
+section[data-marpit-pagination] {
+  counter-reset: none;
+}
+
+section[data-marpit-pagination]::before {
+  display: none;
+}
+
+/* Ensure content is above the overlay */
+section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Headings with gradients */
+h1 {
+  background: linear-gradient(135deg, var(--mauve) 0%, var(--pink) 50%, var(--blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(90deg, var(--mauve), var(--blue)) 1;
+  padding-bottom: 0.2em;
+  text-shadow: none;
+}
+
+h2 {
+  background: linear-gradient(135deg, var(--blue) 0%, var(--sky) 70%, var(--sapphire) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2em;
+  font-weight: 600;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  background: linear-gradient(135deg, var(--sky) 0%, var(--teal) 60%, var(--green) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-top: 0.8em;
+  margin-bottom: 0.4em;
+}
+
+h4 {
+  background: linear-gradient(135deg, var(--teal) 0%, var(--green) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+h5 {
+  background: linear-gradient(135deg, var(--green) 0%, var(--yellow) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+h6 {
+  background: linear-gradient(135deg, var(--yellow) 0%, var(--peach) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+/* Links with gradient hover */
+a {
+  color: var(--sapphire);
+  text-decoration: none;
+  border-bottom: 2px solid var(--sapphire);
+  transition: all 0.3s ease;
+  font-weight: 500;
+  position: relative;
+}
+
+a:hover {
+  background: linear-gradient(135deg, var(--sapphire) 0%, var(--sky) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-bottom: 2px solid transparent;
+  border-image: linear-gradient(90deg, var(--sapphire), var(--sky)) 1;
+}
+
+a:hover::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -4px;
+  right: -4px;
+  bottom: -2px;
+  background: rgba(137, 220, 235, 0.1);
+  border-radius: 4px;
+  z-index: -1;
+}
+
+/* Code */
+code {
+  background: var(--surface0);
+  color: var(--text);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+  font-size: 0.9em;
+}
+
+pre {
+  background: var(--mantle);
+  border: 1px solid var(--surface1);
+  border-radius: 8px;
+  padding: 1em;
+  overflow-x: auto;
+  margin: 1em 0;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.8em;
+}
+
+/* Syntax Highlighting - Catppuccin Mocha */
+.hljs {
+  background: var(--mantle) !important;
+  color: var(--text) !important;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: var(--overlay0) !important;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-addition {
+  color: var(--mauve) !important;
+}
+
+.hljs-number,
+.hljs-string,
+.hljs-meta .hljs-meta-string,
+.hljs-literal,
+.hljs-doctag,
+.hljs-regexp {
+  color: var(--green) !important;
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: var(--blue) !important;
+}
+
+.hljs-attribute,
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-class .hljs-title,
+.hljs-type {
+  color: var(--yellow) !important;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-subst,
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-link {
+  color: var(--teal) !important;
+}
+
+.hljs-built_in,
+.hljs-deletion {
+  color: var(--red) !important;
+}
+
+.hljs-formula {
+  background: var(--surface0) !important;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+/* Lists */
+ul, ol {
+  margin: 1em 0;
+  padding-left: 2em;
+}
+
+li {
+  margin-bottom: 0.5em;
+  color: var(--text);
+}
+
+li::marker {
+  color: var(--mauve);
+  font-weight: bold;
+}
+
+/* Nested list styling */
+ul ul li::marker {
+  color: var(--blue);
+}
+
+ul ul ul li::marker {
+  color: var(--sky);
+}
+
+ol ol li::marker {
+  color: var(--blue);
+}
+
+ol ol ol li::marker {
+  color: var(--sky);
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--blue);
+  background: var(--surface0);
+  padding: 1em 1.5em;
+  margin: 1em 0;
+  border-radius: 0 8px 8px 0;
+}
+
+blockquote p {
+  margin: 0;
+  color: var(--subtext1);
+  font-style: italic;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  background: var(--surface0);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th {
+  background: var(--surface1);
+  color: var(--text);
+  font-weight: 600;
+  padding: 0.8em 1em;
+  text-align: left;
+}
+
+td {
+  padding: 0.8em 1em;
+  border-top: 1px solid var(--surface1);
+  color: var(--text);
+}
+
+tr:nth-child(even) td {
+  background: var(--mantle);
+}
+
+/* Enhanced emphasis with gradients */
+strong {
+  background: linear-gradient(135deg, var(--peach) 0%, var(--yellow) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(250, 179, 135, 0.3);
+}
+
+em {
+  background: linear-gradient(135deg, var(--pink) 0%, var(--mauve) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-style: italic;
+  padding: 2px 4px;
+  border-radius: 3px;
+  position: relative;
+}
+
+em::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(245, 194, 231, 0.15);
+  border-radius: 3px;
+  z-index: -1;
+}
+
+/* Additional emphasis combinations */
+strong em,
+em strong {
+  background: linear-gradient(135deg, var(--mauve) 0%, var(--pink) 50%, var(--blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 8px rgba(203, 166, 247, 0.3);
+}
+
+strong em::before,
+em strong::before {
+  background: rgba(203, 166, 247, 0.15);
+}
+
+
+
+/* Horizontal rule */
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, var(--mauve), var(--blue), var(--sky));
+  margin: 2em 0;
+  border-radius: 1px;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Title slide styling with enhanced gradients */
+section.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: 
+    linear-gradient(135deg, var(--base) 0%, var(--mantle) 50%, var(--crust) 100%),
+    radial-gradient(circle at 30% 30%, rgba(203, 166, 247, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 70% 70%, rgba(137, 180, 250, 0.08) 0%, transparent 50%);
+}
+
+section.title h1 {
+  font-size: 4em;
+  margin-bottom: 0.3em;
+  background: linear-gradient(45deg, var(--mauve), var(--pink), var(--blue), var(--sky), var(--teal));
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease-in-out infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border: none;
+  filter: drop-shadow(0 0 20px rgba(203, 166, 247, 0.3));
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+section.title h2 {
+  background: linear-gradient(135deg, var(--subtext1) 0%, var(--text) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+/* Highlight boxes */
+.info {
+  background: rgba(137, 180, 250, 0.1);
+  border-left: 4px solid var(--blue);
+  padding: 1em;
+  border-radius: 0 8px 8px 0;
+  margin: 1em 0;
+}
+
+.warning {
+  background: rgba(249, 226, 175, 0.1);
+  border-left: 4px solid var(--yellow);
+  padding: 1em;
+  border-radius: 0 8px 8px 0;
+  margin: 1em 0;
+}
+
+.error {
+  background: rgba(243, 139, 168, 0.1);
+  border-left: 4px solid var(--red);
+  padding: 1em;
+  border-radius: 0 8px 8px 0;
+  margin: 1em 0;
+}
+
+.success {
+  background: rgba(166, 227, 161, 0.1);
+  border-left: 4px solid var(--green);
+  padding: 1em;
+  border-radius: 0 8px 8px 0;
+  margin: 1em 0;
+}
