@@ -149,12 +149,27 @@ Entonces obtenemos un workflow como este:
 
 ---
 
+## Clone
+
+Antes de irnos, es importante ver otra funcionalidad de GitHub. Hasta ahora hemos visto cómo crear tu propio repositorio, pero si trabajas en un proyecto grande lo más probable es que no sea tu repositorio. Para esto Git tiene una función muy útil `clone`.
+
+Clonar un repositorio es esencialmente descargarlo en tu computadora, y se hace con el siguiente comando:
+
+```bash
+git clone <HTTP or SSH>
+```
+
+Una vez que hagas esto, si tienes permisos para editar el repositorio, ya puedes empezar a hacer cambios. Recuaerda, no necesitas realizar un `git init` porque el repositorio ya contiene un `.git/`. 
+
+---
+
 ## Recap
 
 - Un repo remoto se crea desde GitHub
 - GitHub nos da instrucciones para no tener que memorizarlas
 - `git pull` realiza `local <= remoto`
 - `git push` realiza `local => remoto`
+- `git clone` descarga un repositorio desde GitHub
 
 ---
 

@@ -13,3 +13,5 @@ Esta es una guía para el uso de Git y Github. Dentro de este repo puedes encont
 **GitHub**: [Git Básico](https://alexxbez.github.io/OGS---Git/html/basic_github.html)
 
 **Ramas 1**: [Ramas Parte 1](https://alexxbez.github.io/OGS---Git/html/git_ramas.html)
+
+**Ramas 2**: [Ramas Parte 2](https://alexxbez.github.io/OGS---Git/html/git_ramas_2.html)
