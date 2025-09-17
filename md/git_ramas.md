@@ -10,11 +10,11 @@ paginate: true
 
 ---
 
-## Introdución
+## Introducción
 
 Las ramas son un concepto fundamental en Git, y es como trabajamos colaborativamente. Hasta ahora solo hemos visto las herramientas que nos permiten trabajar a nosotros personalmente. Ahora nos enfocaremos en las herramientas que nos permiten trabajar con múltiples personas. 
 
-Debido a la importancia de este tema y a la extensión de este, esta guía se dividirá en dos. Dentro de esta primera parte veremos una introducción a las ramas y qué son conceptualmente, y en la siguiente parte veremos exáctamente cómo se crean y utilizan. 
+Debido a la importancia de este tema y a la extensión de este, esta guía se dividirá en dos. Dentro de esta primera parte veremos una introducción a las ramas y qué son conceptualmente, y en la siguiente parte veremos exactamente cómo se crean y utilizan. 
 
 ---
 
@@ -52,7 +52,7 @@ Lo interesante es que puedes volver atrás en esta historia. Si quieres visitar 
 
 ![bg right:40% width:400px](../img/git.png)
 
-Ahora puedas usar el comando:
+Ahora puedes usar el comando:
 
 ```bash
 git checkout <commit-hash>
@@ -74,9 +74,9 @@ También te puedes dar cuenta que el comando `checkout` suena mucho a _checar_, 
 
 ## Ramas
 
-Ahora, te habrás dado cuenta que en la imágen pasada antes de la línea de commits había un nombre `main`. Este es el nombre de la rama en la que te encuentras, la rama principal `main`. 
+Ahora, te habrás dado cuenta que en la imagen pasada antes de la línea de commits había un nombre `main`. Este es el nombre de la rama en la que te encuentras, la rama principal `main`. 
 
-Esto nos introoduce al concepto de ramas. Una rama es una **serie de commits**, o la línea que se genera cuando realizas varios commits seguidos. Lo poderoso de Git es que te permite crear nuevas ramas. 
+Esto nos introduce al concepto de ramas. Una rama es una **serie de commits**, o la línea que se genera cuando realizas varios commits seguidos. Lo poderoso de Git es que te permite crear nuevas ramas. 
 
 ---
 
@@ -84,9 +84,9 @@ Esto nos introoduce al concepto de ramas. Una rama es una **serie de commits**, 
 
 Pero, ¿por qué querrías crear una nueva rama? Esto no es rápidamente obvio cuando solo tu estas trabajando en tu proyecto, pero se vuelve mas obvio cuando trabajas con multiples personas. 
 
-Imagína que varias personas están trabajando en cosas diferentes, una persona trabaja en el movimiento del jugador, otra persona trabaja en los enemigos, y otra en los niveles. Sería muy confuso trabajar en la misma rama implementando tantas cosas. 
+Imagina que varias personas están trabajando en cosas diferentes, una persona trabaja en el movimiento del jugador, otra persona trabaja en los enemigos, y otra en los niveles. Sería muy confuso trabajar en la misma rama implementando tantas cosas. 
 
-Imagína que un compañero se cometió un error que rompe una mecánica y necesita regresar a un commit pasado, pero tú ya habías implementado otra función después de tu compañero. Cuando tu compañero regrese a un commit pasado y continue el desarrollo ahí todo tu trabajo se abría perdido. Esto es lo que resuelven las ramas. 
+Imagina que un compañero se cometió un error que rompe una mecánica y necesita regresar a un commit pasado, pero tú ya habías implementado otra función después de tu compañero. Cuando tu compañero regrese a un commit pasado y continue el desarrollo ahí todo tu trabajo se habría perdido. Esto es lo que resuelven las ramas. 
 
 ---
 
@@ -110,7 +110,7 @@ De esta manera podemos garantizar colaboración con otros sin interferir en las 
 
 ![bg right:40% width:400px](../img/git_2.png)
 
-Podemos ver tres acciones principales en el diagrama. La parte en la que la rama sale de `main`, que es cuando creamos la rama `player`. También observamos la parte en la que se crear los commits en la nueva rama `player`. Y finalmente podemos ver cuando las ramas se combinan para continuar el desarrollo dentro de `main`. 
+Podemos ver tres acciones principales en el diagrama. La parte en la que la rama sale de `main`, que es cuando creamos la rama `player`. También observamos la parte en la que se crean los commits en la nueva rama `player`. Y finalmente podemos ver cuando las ramas se combinan para continuar el desarrollo dentro de `main`. 
 
 ---
 
@@ -120,6 +120,6 @@ Estas tres acciones, **crear**, **continuar**, y **juntar** son en las que nos e
 
 ---
 
-# ¡Graciais!
+# ¡Gracias!
 
 ## Siguiente parte: Ramas Parte 2

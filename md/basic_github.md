@@ -10,11 +10,11 @@ paginate: true
 
 ---
 
-## Introdución
+## Introducción
 
 Hasta ahora hemos visto cómo tomar screenshots de nuestro código mediante Git. Esta es una función muy útil. En esta guía veremos otra función muy útil, compartir nuestro código y colaborar con otros. 
 
-Recordemos que en la guía pasada creamos un repositorio local. Ahora buscamos poder subirlo a una plataforma (GitHub) para que otroos puedan ver nuestro código.
+Recordemos que en la guía pasada creamos un repositorio local. Ahora buscamos poder subirlo a una plataforma (GitHub) para que otros puedan ver nuestro código.
 
 ---
 
@@ -42,7 +42,7 @@ Ahora lo que necesitamos en conectar nuestro repositorio local con nuestro repos
 git branch -M main
 ```
 
-Este comando habla de crear ramas. Este es un concepto muy importante en programamción colaborativa, y la siguiente guía hablará de esto. Por ahora solo ejecutemos el comando. 
+Este comando habla de crear ramas. Este es un concepto muy importante en programación colaborativa, y la siguiente guía hablará de esto. Por ahora solo ejecutemos el comando. 
 
 ---
 
@@ -54,7 +54,7 @@ El siguiente comando guarda nuestro repositorio local en el remoto. Este comando
 git remote add origin git@github.com:alexxbez/temp.git
 ```
 
-Este añade nuestro repositorio remoto a nuestro Git local. Escencialmente toma el HTTP o SSH y lo guarda en una variable, `origin`. En este caso estamos diciendo que para un repositorio remoto, agregue la variable `origin` y guarde dentro de esta la dirección de nuestro repo remoto. 
+Este añade nuestro repositorio remoto a nuestro Git local. Esencialmente toma el HTTP o SSH y lo guarda en una variable, `origin`. En este caso estamos diciendo que para un repositorio remoto, agregue la variable `origin` y guarde dentro de esta la dirección de nuestro repo remoto. 
 
 En este paso todavía no conectamos los dos repositorios, solo guardamos la dirección del repo remoto dentro de `origin`.
 
@@ -105,7 +105,7 @@ Okay, hemos visto varias cosas, ahora ¿cómo juntamos todo? A continuación vam
 
 ### Pull
 
-Primero vamos a introducir in último comando. Cuando estas trabajandor colaborativamente, tus compañeros pudieron haber hecho cambios al código, y tú quieres poder traer esos cambios a tu computadora. ¡No quieres trabajar en código viejo!
+Primero vamos a introducir in último comando. Cuando estas trabajando colaborativamente, tus compañeros pudieron haber hecho cambios al código, y tú quieres poder traer esos cambios a tu computadora. ¡No quieres trabajar en código viejo!
 
 Para esto se utiliza el siguiente comando:
 
@@ -113,7 +113,7 @@ Para esto se utiliza el siguiente comando:
 git pull origin main
 ```
 
-Este comando se treaerá todo lo que se encuentra en el repositorio remoto dentro de la rama `main`. 
+Este comando se traerá todo lo que se encuentra en el repositorio remoto dentro de la rama `main`. 
 
 ---
 
@@ -159,7 +159,17 @@ Clonar un repositorio es esencialmente descargarlo en tu computadora, y se hace 
 git clone <HTTP or SSH>
 ```
 
-Una vez que hagas esto, si tienes permisos para editar el repositorio, ya puedes empezar a hacer cambios. Recuaerda, no necesitas realizar un `git init` porque el repositorio ya contiene un `.git/`. 
+Una vez que hagas esto, si tienes permisos para editar el repositorio, ya puedes empezar a hacer cambios. Recuerda, no necesitas realizar un `git init` porque el repositorio ya contiene un `.git/`. 
+
+---
+
+#### Trabajar en nuestro proyecto
+
+Hasta ahora hemos visto y analizado varias funcionalidades de Git y GitHub. Sin embargo, es importante aclarar que **no es necesario hacer todo esto cuando estes trabajando en el proyecto**. 
+
+El repositorio ya está hecho y lo puedes encontrar en GitHub. Lo único que debes hacer es clonarlo desde tu computadora. Con esto habrás "descargado" el proyecto de Godot. Ahora lo único que deberías hacer es abrir ese proyecto dentro de Godot y ¡PAM!, estás listo para empezar a desarrollar.
+
+En las siguientes guías veremos funcionalidades un poco más avanzadas de Git y GitHub, pero que son fundamentales para el desarrollo colaborativo. 
 
 ---
 

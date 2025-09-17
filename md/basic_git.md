@@ -10,7 +10,7 @@ paginate: true
 
 ---
 
-## Introdución
+## Introducción
 
 Dentro de esta guía nos enfocaremos en las funciones básicas de Git. No vamos a utilizar GitHub por el momento, sino que nos enfocaremos en el desarrollo local. 
 
@@ -18,7 +18,7 @@ Dentro de esta guía nos enfocaremos en las funciones básicas de Git. No vamos 
 
 ## Estructura
 
-Como se mencionó en la introducción, Git utiliza un un directorio mágico llamado `.git/`. Este directorio vive dentro de nuestro proyecto/carpeta. 
+Como se mencionó en la introducción, Git utiliza un directorio mágico llamado `.git/`. Este directorio vive dentro de nuestro proyecto/carpeta.
 
 ```txt
 my_project/
@@ -49,7 +49,7 @@ Entonces, a cualquier folder con un directorio `.git/` y que esté dentro de nue
 
 Entonces, ¿cómo creo este repositorio local? Primero debes crear una carpeta nueva. Esa carpeta nueva se volverá nuestro repositorio. Ahora debes acceder a esa carpeta mediante la terminal. En el explorador de archivos puedes abrir seleccionar abrir una carpeta en la terminal. Puedes investigar información respecto a esto. 
 
-Una vez que estes dentro de la carpte en la terminal, ejecuta el siguiente comando.
+Una vez que estes dentro de la carpeta en la terminal, ejecuta el siguiente comando.
 
 ```bash
 git init
@@ -61,7 +61,7 @@ Este comando simplemente crea el directorio `.git/` dentro de la carpeta en la q
 
 ## Crear un repositorio
 
-Con esto, ya tienes un repositorio creado. Recuerda, un repositorio es una carpte con el directorio `.git/`. 
+Con esto, ya tienes un repositorio creado. Recuerda, un repositorio es una carpeta con el directorio `.git/`. 
 
 Ahora podemos pasar a explorar las funcionalidades de Git.
 
@@ -83,7 +83,7 @@ Esto es lo que vamos a aprender a hacer dentro de esta guía.
 
 Este es el paso más sencillo. Simplemente debes modificar algo dentro del repositorio. Esto quiere decir, añadir un archivo, crear un archivo, eliminar un archivo, modificar un archivo, etc. Todos estos son cambios que Git puede trackear. 
 
-Si estas siguiendo esta guía, inténtalo. Crea un archivo (pueden ser un scritp de Python), y agrega algo. 
+Si estas siguiendo esta guía, inténtalo. Crea un archivo (pueden ser un script de Python), y agrega algo. 
 
 --- 
 
@@ -120,7 +120,7 @@ Este es el último paso (en un repositorio local). Ahora debemos de decirle a Gi
 git commit -m "message"
 ```
 
-En la parte de `message` pones un comentario que diga que es lo que hace tu cambio. Es buena práctica poner mensajes descriptivos pero consisos. Simplemente dí lo que tu cambio hace. 
+En la parte de `message` pones un comentario que diga que es lo que hace tu cambio. Es buena práctica poner mensajes descriptivos pero concisos. Simplemente dí lo que tu cambio hace. 
 
 Si estás siguiendo la guía, intentalo. 
 
@@ -141,7 +141,7 @@ Aunque no sea obvio, Git ya esta trackeando todos estos archivos y esta creando 
 - Un repositorio se inicializa con `git init`
 - Primero modifico algo
 - Segundo preparo archivos con `git add .`
-- Tercero tomo screenshot con `git commmit -m "message"`
+- Tercero tomo screenshot con `git commit -m "message"`
 
 ---
 

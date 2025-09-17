@@ -10,9 +10,9 @@ paginate: true
 
 ---
 
-## Introdución
+## Introducción
 
-Dentro de esta guía vamos a ver como se hacen los tres pasos que descubrir como se ejecutan los tres pasos que descubrimos la guía pasada, **crear**, **continuar**, y **juntar**. 
+Dentro de esta guía vamos a ver como se hacen los tres pasos que descubrimos la guía pasada, **crear**, **continuar**, y **juntar**. 
 
 También vamos a hablar de la diferencia entre ramas locales y ramas remotas. 
 
@@ -76,9 +76,7 @@ Estos dos comandos crean una nueva rama y automáticamente cambian a ella.
 
 ---
 
-### Continuar
-
-![bg right:40% width:400px](../img/continuar_rama.png)
+##e continuar_rama.png)
 
 Ahora que logramos cambiar de rama, podemos desarrollar dentro de esta rama. 
 
@@ -166,7 +164,7 @@ Esta operación se puede realizar dentro de Git, sin embargo no es recomendable 
 
 ### Pull Requests
 
-Hemos hablado de que la función principal de GitHub es hostear código remoto, sin embargo no es su única función. GitHub también nos permite generar **pull requests**, que son una manera de que alguien pueda revisar nuestro código y dar retroalimentación. Una vez que el código haya sido aprovado, entonces el merge sucede automáticamente. 
+Hemos hablado de que la función principal de GitHub es hostear código remoto, sin embargo no es su única función. GitHub también nos permite generar **pull requests**, que son una manera de que alguien pueda revisar nuestro código y dar retroalimentación. Una vez que el código haya sido aprobado, entonces el merge sucede automáticamente. 
 
 --- 
 
@@ -176,7 +174,7 @@ Para generar un PR (pull request), se navega a la pestaña de pull requests dent
 
 Con esto listo simplemente envías tu PR, y alguien con autorización (o tú mismo si eres el dueño del repo) te confirmará o te dará retroalimentación. 
 
-Cuando tu PR sea aprovada puedes eliminar la rama local y remota, y estas listo para continuar con el desarrollo!
+Cuando tu PR sea aprobada puedes eliminar la rama local y remota, y estas listo para continuar con el desarrollo!
 
 --- 
 

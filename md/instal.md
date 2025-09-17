@@ -10,7 +10,7 @@ paginate: true
 
 ---
 
-## Introduccón
+## Introducción
 
 Antes de ver a fondo las capacidades de Git y GitHub, conviene instalar todo lo necesario. Esta guía ayuda con la instalación.
 
@@ -32,7 +32,7 @@ La instalación es diferente para cada plataforma. A continuación mostramos có
 
 ### Windows
 
-Visita la página de [Git](https://git-scm.com/downloads/win), y elige la versión correcta. Durante la instalación full siguiente, y ¡listo!
+Visita la página de [Git](https://git-scm.com/downloads/win), y elige la versión correcta. Durante la instalación sigue los pasos, y ¡listo!
 
 Para comprobar la instalación, abre tu terminal (cmd, no necesariamente la de git que acabas de instalar), y ejecuta el comando:
 
@@ -64,7 +64,7 @@ La forma tradicional es utilizando el comando que aparece en la página, lo copi
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Pero **no** es necesario hacer esto. Pudes ir al link que aparece, descargar el `pkg` desde GitHub.
+Pero **no** es necesario hacer esto. Puedes ir al link que aparece, descargar el `pkg` desde GitHub.
 
 ![Image](./../img/homebrew.png)
 
@@ -117,13 +117,13 @@ Ingresa tu nombre y tu correo en los parámetros, y ¡listo!
 
 ## Setup
 
-Acabamos de instalar Git, pero hay que recordar que vamos a usar GitHub, por lo que necesitamos linkear ambos. Existen dos métodos, SSH y HTTP. SSH es generalmente mejor, pero es un poco más complicado de configuurar en windows, por lo que usaremos HTTP para windows y SSH para mac y linux.
+Acabamos de instalar Git, pero hay que recordar que vamos a usar GitHub, por lo que necesitamos linkear ambos. Existen dos métodos, SSH y HTTP. SSH es generalmente mejor, pero es un poco más complicado de configurar en windows, por lo que usaremos HTTP para windows y SSH para mac y linux.
 
 ---
 
 ### Windows
 
-Para esto ya debes de tener un cuenta en GitHub. Dentro de la página ve a tu `perfil > settings > developer settings > personal access tokens > tokens (classic)` y genera un nuevo token. Cuando generes tu nuevo token, **copialo** inmediatamente y **guardalo** en un lugar seguro. Cada vez que intentes hacer una acción que involucre a GitHub se te pedirá. 
+Para esto ya debes de tener una cuenta en GitHub. Dentro de la página ve a tu `perfil > settings > developer settings > personal access tokens > tokens (classic)` y genera un nuevo token. Cuando generes tu nuevo token, **copialo** inmediatamente y **guardalo** en un lugar seguro. Cada vez que intentes hacer una acción que involucre a GitHub se te pedirá. 
 
 Nuevamente, SSH es mejor que HTTP, por lo que si te interesa puedes investigar acerca de cómo configurar SSH en Windows (o pregúntale a chat). Debido al alcance de esta guía, no se puede explicar el proceso para windows.
 
@@ -164,7 +164,7 @@ Y copia todo el texto que aparece. Esta es tu clave pública. Abre tu sesión en
 
 ## Recap
 
-En esta guía aprendimos a instalar y configurar Git. No te preocupes si no entendiste todos lo comandos o instrucciones, es algo que se aprende con la práctica. Si algo no funcionó o te atoraste en algún paso, no dudes en contactarnos, estamos dispuestos a ayudarte. 
+En esta guía aprendimos a instalar y configurar Git. No te preocupes si no entendiste todos los comandos o instrucciones, es algo que se aprende con la práctica. Si algo no funcionó o te atoraste en algún paso, no dudes en contactarnos, estamos dispuestos a ayudarte. 
 
 ---
 
